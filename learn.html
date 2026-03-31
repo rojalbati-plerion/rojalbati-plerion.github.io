@@ -106,6 +106,28 @@
       margin-top: 0.25rem;
     }
     .bonus-link:hover { background: #1dd67c; }
+
+    .video-wrap {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .video-wrap iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: 0;
+      border-radius: 8px;
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -141,6 +163,14 @@
           <span class="course-time">⏱ 7 Days &nbsp;[1.5–2 hrs daily]</span>
         </div>
         <p class="course-desc">In this course, you will learn the fundamentals of software testing. It is recommended that you take detailed notes as you progress through the material, as these notes will be useful when you begin working as a QA engineer.</p>
+        <div class="video-grid">
+          <div class="video-wrap">
+            <iframe src="https://www.youtube.com/embed/QJqNYhiHysM" title="Manual Testing - Part 1" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-wrap">
+            <iframe src="https://www.youtube.com/embed/Pus2sIUHmMc" title="Manual Testing - Part 2" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
         <a href="https://docs.google.com/document/d/1fJFEONJflhQU-bdZ6h5rNcuHorAPsOCsb2ypZGeik44/copy" target="_blank" rel="noopener" class="resource-link">
           <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           Sample CV Template
@@ -154,6 +184,9 @@
           <span class="course-time">⏱ 1 Day &nbsp;[Approx. 2 Hours]</span>
         </div>
         <p class="course-desc">This course will provide a comprehensive understanding of APIs and how to test them using the POSTMAN tool. By the end of this course, you should have a solid foundation in API testing and be able to effectively utilise the POSTMAN tool.</p>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/bdHeDZPrYec" title="API Testing with Postman" allowfullscreen loading="lazy"></iframe>
+        </div>
       </div>
 
       <!-- 3. Performance Testing -->
@@ -166,6 +199,14 @@
         <div class="course-note">
           📌 Watch the JMeter 2021 Masterclass video until "1st JMeter Test" — i.e. up to the <strong>28:57</strong> mark (Video 2).
         </div>
+        <div class="video-grid">
+          <div class="video-wrap">
+            <iframe src="https://www.youtube.com/embed/-dI_gKRePRo" title="Performance Testing - JMeter" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-wrap">
+            <iframe src="https://www.youtube.com/embed/SoW2pBak1_Q?end=1737" title="JMeter 2021 Masterclass" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
       </div>
 
       <!-- 4. Test Automation -->
@@ -176,12 +217,25 @@
         </div>
         <p class="course-desc">Learn test automation using the Cypress framework and write your first automated test. Before starting, make sure you have <strong>Node.js</strong>, <strong>VS Code</strong>, and basic <strong>JavaScript</strong> knowledge.</p>
         <div class="course-note">
-          📌 <strong>Prerequisite:</strong> Watch the JavaScript tutorial linked below before starting the Cypress course.
+          📌 <strong>Prerequisite:</strong> Watch the JavaScript tutorial below before starting the Cypress course.
         </div>
-        <a href="https://youtu.be/IQuG77FNMhw" target="_blank" rel="noopener" class="resource-link">
-          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
-          JavaScript Tutorial for Beginners – Test Automation
-        </a>
+        <div class="video-grid">
+          <div class="video-wrap">
+            <iframe src="https://www.youtube.com/embed/IQuG77FNMhw" title="JavaScript Tutorial for Beginners – Test Automation" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-wrap">
+            <iframe src="https://www.youtube.com/embed/CYcdT-tOvB0" title="Cypress Test Automation" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-wrap">
+            <iframe src="https://www.youtube.com/embed/1wlK2WhpphY" title="Cypress Tutorial" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-wrap">
+            <iframe src="https://www.youtube.com/embed/3T9F7TnUgWs" title="Cypress Advanced" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-wrap">
+            <iframe src="https://www.youtube.com/embed/cIXek-HS46k" title="Cypress Best Practices" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
       </div>
 
       <!-- 5. Scrum -->
@@ -191,6 +245,9 @@
           <span class="course-time">⏱ 1 Day &nbsp;[Less than an hour]</span>
         </div>
         <p class="course-desc">In this course you will get a better idea of Agile (specifically Scrum) methodology for Software Development.</p>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/oTZd2vo3FQU" title="Scrum / Agile Methodology" allowfullscreen loading="lazy"></iframe>
+        </div>
       </div>
 
       <!-- BONUS -->
