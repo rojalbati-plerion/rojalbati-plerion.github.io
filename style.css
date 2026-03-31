@@ -1,0 +1,796 @@
+/* =========================================
+   Rojal Bati - GitHub Pages
+   Color Palette:
+     Green accent:  #29f48f
+     Teal:          #238c8c
+     Dark teal:     #0d5b5b
+     Dark text:     #144659
+   ========================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  line-height: 1.7;
+  background: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---- TYPOGRAPHY ---- */
+.section-title {
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #144659;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #29f48f;
+  margin-top: 0.4rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-center.section-title::after {
+  margin: 0.4rem auto 0;
+}
+
+/* ---- LAYOUT ---- */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+/* ---- BUTTONS ---- */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: #29f48f;
+  color: #0d5b5b;
+  border-color: #29f48f;
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: #29f48f;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: #238c8c;
+}
+
+/* ===========================
+   HEADER
+   =========================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.header-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.site-logo {
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #144659;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.site-logo:hover {
+  color: #238c8c;
+}
+
+/* NAV */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #144659;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.nav-link {
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #144659;
+  padding: 0.5rem 0.85rem;
+  border-radius: 4px;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: #238c8c;
+}
+
+.arrow {
+  font-size: 0.65rem;
+  vertical-align: middle;
+  margin-left: 3px;
+}
+
+/* DROPDOWN */
+.nav-item {
+  position: relative;
+}
+
+.submenu {
+  list-style: none;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  border-top: 3px solid #29f48f;
+  border-radius: 0 0 6px 6px;
+  min-width: 170px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.25s ease;
+  z-index: 999;
+}
+
+.has-submenu:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.submenu-header {
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #238c8c;
+  padding: 0.6rem 1rem 0.3rem;
+}
+
+.submenu li a {
+  display: block;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #144659;
+  padding: 0.45rem 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.submenu li a:hover {
+  background: #f0fdf8;
+  color: #238c8c;
+}
+
+/* ===========================
+   HERO
+   =========================== */
+.hero {
+  background: linear-gradient(135deg, #0d5b5b 0%, #238c8c 60%, #29b88a 100%);
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2329f48f' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+}
+
+.hero-title {
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  color: #fff;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.hero-tagline {
+  font-family: 'Maven Pro', sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 2.5rem;
+  font-style: italic;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===========================
+   ABOUT
+   =========================== */
+.about-section {
+  background: #fff;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-text p {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.image-placeholder {
+  background: #f0fdf8;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #e0f7ef;
+  aspect-ratio: 3/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===========================
+   PURPOSE / STATS
+   =========================== */
+.purpose-section {
+  background: #f8fffe;
+}
+
+.purpose-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.purpose-statement {
+  font-size: 1.25rem;
+  color: #238c8c;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: #fff;
+  border: 2px solid #e0f7ef;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(41, 244, 143, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(41, 244, 143, 0.2);
+}
+
+.stat-number {
+  display: block;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #238c8c;
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #666;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ===========================
+   ACHIEVEMENTS
+   =========================== */
+.achievements-section {
+  background: #0d5b5b;
+  color: #fff;
+}
+
+.achievements-section .section-title {
+  color: #fff;
+}
+
+.achievements-section .section-title::after {
+  background: #29f48f;
+}
+
+.achievements-text {
+  color: rgba(255,255,255,0.85);
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  font-size: 1.05rem;
+}
+
+.achievements-icons {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.achievement-icon {
+  text-align: center;
+}
+
+.icon-circle {
+  width: 90px;
+  height: 90px;
+  background: rgba(41,244,143,0.1);
+  border: 2px solid rgba(41,244,143,0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.75rem;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.icon-circle:hover {
+  background: rgba(41,244,143,0.2);
+  border-color: #29f48f;
+}
+
+.achievement-icon p {
+  color: rgba(255,255,255,0.85);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* ===========================
+   COMPANIES
+   =========================== */
+.companies-section {
+  background: #fff;
+}
+
+.companies-tagline {
+  color: #666;
+  margin-bottom: 2.5rem;
+}
+
+.companies-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.company-card {
+  border: 2px solid #e8f8f2;
+  border-radius: 10px;
+  padding: 2rem 1rem;
+  text-align: center;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.company-card:hover {
+  border-color: #29f48f;
+  box-shadow: 0 4px 16px rgba(41,244,143,0.15);
+}
+
+.company-logo-placeholder {
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #238c8c;
+  letter-spacing: 0.5px;
+}
+
+/* ===========================
+   CONTACT
+   =========================== */
+.contact-section {
+  background: #f8fffe;
+}
+
+.contact-intro {
+  color: #555;
+  max-width: 650px;
+  margin: 0 auto 3rem;
+  font-size: 1.05rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.contact-icon {
+  width: 44px;
+  height: 44px;
+  background: #238c8c;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+.contact-item strong {
+  display: block;
+  color: #144659;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.2rem;
+}
+
+.contact-item a {
+  color: #238c8c;
+  transition: color 0.2s;
+}
+
+.contact-item a:hover {
+  color: #29f48f;
+}
+
+/* FORM */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #144659;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95rem;
+  color: #333;
+  transition: border-color 0.3s;
+  outline: none;
+  background: #fff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #238c8c;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* ===========================
+   FAQ
+   =========================== */
+.faq-section {
+  background: #fff;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  background: #fff;
+  border: none;
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #144659;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.faq-question:hover {
+  background: #f0fdf8;
+  color: #238c8c;
+}
+
+.faq-question.active {
+  background: #238c8c;
+  color: #fff;
+}
+
+.faq-question.active .faq-arrow {
+  transform: rotate(180deg);
+}
+
+.faq-arrow {
+  font-size: 0.75rem;
+  transition: transform 0.3s;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s;
+  background: #fafffe;
+}
+
+.faq-answer.open {
+  max-height: 500px;
+  padding: 1.25rem 1.5rem;
+}
+
+.faq-answer p {
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+.faq-answer p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-answer ol {
+  padding-left: 1.25rem;
+  color: #555;
+}
+
+.faq-answer ol li {
+  margin-bottom: 0.5rem;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+.site-footer {
+  background: #0d5b5b;
+  color: rgba(255,255,255,0.8);
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+.footer-logo {
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 0.25rem;
+}
+
+.footer-tagline {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 1.25rem;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.social-link {
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.7);
+  transition: color 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.social-link:hover {
+  color: #29f48f;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 900px) {
+  .about-grid,
+  .purpose-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .companies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-image {
+    max-width: 400px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+  }
+
+  .site-nav.open {
+    display: block;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 0;
+    align-items: stretch;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0;
+  }
+
+  .submenu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border-top: none;
+    border-left: 3px solid #29f48f;
+    margin-left: 1.5rem;
+    display: none;
+  }
+
+  .has-submenu.open .submenu {
+    display: block;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .companies-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
