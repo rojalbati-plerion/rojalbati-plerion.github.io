@@ -56,7 +56,7 @@
       <p class="footer-logo">Rojal Bati</p>
       <p class="footer-tagline">Learn, Earn and Serve in Testing</p>
       <div class="footer-social">
-        <a href="mailto:[email protected]" class="social-link">Email</a>
+        <a href="mailto:rojalbati@gmail.com" class="social-link">Email</a>
         <a href="https://linkedin.com/in/rojalbati" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
       </div>
       <p class="footer-copy">Copyright &copy; 2026 Rojal Bati. All rights reserved.</p>
