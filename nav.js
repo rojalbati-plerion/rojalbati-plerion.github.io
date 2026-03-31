@@ -1,5 +1,11 @@
 // Shared header & footer injected into every page
 (function () {
+  // Inject Inter font on every page
+  const fontLink = document.createElement('link');
+  fontLink.rel = 'stylesheet';
+  fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Maven+Pro:wght@400;600;700&display=swap';
+  document.head.appendChild(fontLink);
+
   const NAV_HTML = `
   <header class="site-header">
     <div class="header-inner">
@@ -8,7 +14,6 @@
       <nav class="site-nav">
         <ul class="nav-list">
 
-          <!-- Career Guidance — two-level dropdown -->
           <li class="nav-item has-dropdown">
             <a href="career-guidance.html" class="nav-link">Career Guidance <span class="caret">&#9660;</span></a>
             <ul class="dropdown level-1">
@@ -30,10 +35,9 @@
           <li class="nav-item"><a href="index.html#faq" class="nav-link">FAQ</a></li>
           <li class="nav-item"><a href="motivational-quotes.html" class="nav-link">Motivational Quotes</a></li>
 
-          <!-- Search -->
           <li class="nav-item nav-search">
             <button class="search-btn" aria-label="Search" onclick="toggleSearch()">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
               </svg>
             </button>
@@ -41,10 +45,9 @@
         </ul>
       </nav>
     </div>
-    <!-- Search bar -->
     <div class="search-bar" id="searchBar">
       <div class="search-inner">
-        <input type="text" id="searchInput" placeholder="Search…" />
+        <input type="text" id="searchInput" placeholder="Search pages…" />
         <button onclick="toggleSearch()">&#10005;</button>
       </div>
     </div>
@@ -52,23 +55,29 @@
 
   const FOOTER_HTML = `
   <footer class="site-footer">
-    <div class="container">
-      <p class="footer-logo">Rojal Bati</p>
-      <p class="footer-tagline">Learn, Earn and Serve in Testing</p>
-      <div class="footer-social">
-        <a href="mailto:rojalbati@gmail.com" class="social-link">Email</a>
-        <a href="https://linkedin.com/in/rojalbati" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">Rojal Bati</span>
+        <p class="footer-tagline">Learn, Earn and Serve in Testing</p>
       </div>
-      <p class="footer-copy">Copyright &copy; 2026 Rojal Bati. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="career-guidance.html">Career Guidance</a>
+        <a href="team.html">Team</a>
+        <a href="motivational-quotes.html">Quotes</a>
+        <a href="mailto:rojalbati@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/rojalbati" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Rojal Bati. All rights reserved.</span>
+      <span>Built with &hearts; for the QA community</span>
     </div>
   </footer>`;
 
   document.addEventListener('DOMContentLoaded', function () {
-    // Inject header
     const headerPlaceholder = document.getElementById('header-placeholder');
     if (headerPlaceholder) headerPlaceholder.outerHTML = NAV_HTML;
 
-    // Inject footer
     const footerPlaceholder = document.getElementById('footer-placeholder');
     if (footerPlaceholder) footerPlaceholder.outerHTML = FOOTER_HTML;
 
@@ -86,7 +95,6 @@
       if (toggle) { nav.classList.toggle('open'); return; }
       if (!e.target.closest('.site-header')) nav && nav.classList.remove('open');
 
-      // Mobile: level-1 toggle
       const flyoutTrigger = e.target.closest('.has-flyout > a');
       if (flyoutTrigger && window.innerWidth <= 768) {
         e.preventDefault();

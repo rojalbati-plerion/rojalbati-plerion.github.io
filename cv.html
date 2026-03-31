@@ -3,38 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CV - Career Guidance | Rojal Bati</title>
+  <title>CV — Career Guidance | Rojal Bati</title>
   <meta name="description" content="How to create a clean, effective QA engineer CV that gets interview calls." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Maven+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <script src="nav.js" defer></script>
   <style>
-    .tip-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+    .tip-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 2rem; }
     @media (max-width: 640px) { .tip-grid { grid-template-columns: 1fr; } }
     .tip-item {
-      display: flex;
-      gap: 0.9rem;
-      align-items: flex-start;
-      background: #f8fffe;
-      border: 1px solid #e0f0ea;
-      border-radius: 10px;
-      padding: 1rem 1.25rem;
+      display: flex; gap: 0.9rem; align-items: flex-start;
+      background: var(--bg-soft); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 1rem 1.25rem;
     }
     .tip-num {
-      width: 32px; height: 32px;
-      background: #238c8c;
-      color: #fff;
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Maven Pro', sans-serif;
-      font-weight: 700;
-      font-size: 0.85rem;
-      flex-shrink: 0;
+      width: 30px; height: 30px; background: var(--primary); color: #fff;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-family: 'Maven Pro', sans-serif; font-weight: 700; font-size: 0.82rem; flex-shrink: 0;
     }
-    .tip-item p { color: #555; font-size: 0.9rem; margin: 0; }
-    .tip-item strong { color: #144659; }
+    .tip-item p { color: var(--text); font-size: 0.875rem; margin: 0; line-height: 1.6; }
+    .tip-item strong { color: var(--heading); }
   </style>
 </head>
 <body>
@@ -51,56 +41,51 @@
   <section class="section">
     <div class="container">
       <div class="breadcrumb">
-        <a href="index.html">Home</a>
-        <span>&#8250;</span>
-        <a href="#">Career Guidance</a>
-        <span>&#8250;</span>
-        <a href="#">Beginner</a>
-        <span>&#8250;</span>
+        <a href="index.html">Home</a><span>&#8250;</span>
+        <a href="career-guidance.html">Career Guidance</a><span>&#8250;</span>
+        <a href="career-guidance.html">Beginner</a><span>&#8250;</span>
         <span>CV</span>
       </div>
 
       <h2 class="section-title">Create a Clean CV</h2>
-      <p style="color:#555;margin-bottom:1.5rem;">After completing the available courses, prepare your CV for QA internship positions. Use the sample CV below which includes all relevant skillsets from the coursework.</p>
+      <p style="color:var(--text);margin-bottom:1.75rem;">After completing the courses, prepare your CV for QA internship positions. Use the sample below — it includes all the relevant skills covered in the coursework.</p>
 
-      <div style="margin-bottom:2.5rem;">
+      <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:2.5rem;">
         <a href="https://docs.google.com/document/d/1fJFEONJflhQU-bdZ6h5rNcuHorAPsOCsb2ypZGeik44/copy" target="_blank" rel="noopener" class="btn btn-primary">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           Use Sample CV Template
         </a>
-        <a href="https://www.linkedin.com/in/rojalbati/" target="_blank" rel="noopener" class="btn btn-primary" style="margin-left:0.75rem;">
+        <a href="https://www.linkedin.com/in/rojalbati/" target="_blank" rel="noopener" class="btn btn-primary">
           View LinkedIn Example
         </a>
       </div>
 
-      <!-- CV Structure -->
       <div class="content-card">
         <h3>CV Structure</h3>
         <ol>
           <li><strong>Personal Information</strong> — Full name, address (city/country), phone with country code, professional email (firstname.lastname@domain.com), GitHub link, LinkedIn link.</li>
-          <li><strong>Summary / Objective</strong> — Show your interest in the industry, company, and role. Research the company mission and tech stack. Keep it to 3–4 lines.</li>
+          <li><strong>Summary / Objective</strong> — Show your interest in the company, role, and industry. Research the company mission and tech stack. Keep it to 3–4 lines.</li>
           <li><strong>Skills</strong> — Match the job description. Include only relevant skills; highlight unique competencies aligned with the role.</li>
-          <li><strong>Professional Experience</strong> — Focus on accomplishments and value added. Example: <em>"Automated smoke tests using Cypress which helped reduce time by 50% and researched best practices to write tests faster in an Agile environment."</em></li>
-          <li><strong>Education</strong> — Most recent degree preferred. Include GPA/percentage if strong. Recent graduates should place Education above Skills.</li>
-          <li><strong>Certifications / Achievements</strong> — Include only relevant certifications (e.g., ISTQB for QA roles).</li>
+          <li><strong>Professional Experience</strong> — Focus on accomplishments and value added. Example: <em>"Automated smoke tests using Cypress, reducing regression time by 50% in an Agile environment."</em></li>
+          <li><strong>Education</strong> — Most recent degree first. Include GPA/percentage if strong. Recent graduates should place Education above Skills.</li>
+          <li><strong>Certifications / Achievements</strong> — Include only relevant certifications (e.g. ISTQB for QA roles).</li>
           <li><strong>Hobbies / Interests</strong> — Keep it authentic and personal.</li>
           <li><strong>References</strong> — Simply write <em>"Available upon request."</em></li>
         </ol>
       </div>
 
-      <!-- 10 Tips -->
-      <h3 style="font-family:'Maven Pro',sans-serif;font-weight:700;color:#144659;margin-bottom:1.25rem;font-size:1.15rem;">10 Best Practices</h3>
+      <h3 style="font-family:'Maven Pro',sans-serif;font-weight:700;color:var(--heading);margin-bottom:1.25rem;font-size:1.1rem;">10 Best Practices</h3>
       <div class="tip-grid">
-        <div class="tip-item"><div class="tip-num">1</div><p><strong>Tool:</strong> Use Google Docs for accessibility and editing flexibility.</p></div>
-        <div class="tip-item"><div class="tip-num">2</div><p><strong>Research:</strong> Check LinkedIn profiles of employees at your target companies early to identify required skills.</p></div>
-        <div class="tip-item"><div class="tip-num">3</div><p><strong>ATS:</strong> Include keywords from the job description. Aim for 7 of 10 required skills minimum. Use <a href="https://www.topresume.com/" target="_blank" rel="noopener" style="color:#238c8c;">TopResume</a> for a free review.</p></div>
+        <div class="tip-item"><div class="tip-num">1</div><p><strong>Tool:</strong> Use Google Docs for easy sharing and real-time editing.</p></div>
+        <div class="tip-item"><div class="tip-num">2</div><p><strong>Research:</strong> Check LinkedIn profiles of QA engineers at your target companies to spot required skills early.</p></div>
+        <div class="tip-item"><div class="tip-num">3</div><p><strong>ATS:</strong> Mirror keywords from the job description. Aim for at least 7 out of 10 required skills. Use <a href="https://www.topresume.com/" target="_blank" rel="noopener">TopResume</a> for a free review.</p></div>
         <div class="tip-item"><div class="tip-num">4</div><p><strong>Length:</strong> Keep it to 1–2 pages maximum.</p></div>
-        <div class="tip-item"><div class="tip-num">5</div><p><strong>Quality:</strong> Use Grammarly, consistent design, minimal colors (black &amp; white preferred), and verify all links.</p></div>
-        <div class="tip-item"><div class="tip-num">6</div><p><strong>Referrals:</strong> Obtain company referrals when possible — they dramatically increase your chances.</p></div>
-        <div class="tip-item"><div class="tip-num">7</div><p><strong>Naming:</strong> Format your file as <em>"CV [Full Name] – [Position Title]"</em>.</p></div>
-        <div class="tip-item"><div class="tip-num">8</div><p><strong>Format:</strong> Submit as <strong>PDF</strong> to preserve formatting and enable browser viewing.</p></div>
+        <div class="tip-item"><div class="tip-num">5</div><p><strong>Quality:</strong> Use Grammarly, maintain consistent formatting, stick to minimal colors, and verify every link.</p></div>
+        <div class="tip-item"><div class="tip-num">6</div><p><strong>Referrals:</strong> A company referral dramatically increases your chances — aim for one when possible.</p></div>
+        <div class="tip-item"><div class="tip-num">7</div><p><strong>Naming:</strong> Save your file as <em>"CV [Full Name] – [Position Title]"</em>.</p></div>
+        <div class="tip-item"><div class="tip-num">8</div><p><strong>Format:</strong> Submit as <strong>PDF</strong> to preserve layout and enable browser preview.</p></div>
         <div class="tip-item"><div class="tip-num">9</div><p><strong>Timing:</strong> Apply on Monday mornings before office hours for maximum visibility.</p></div>
-        <div class="tip-item"><div class="tip-num">10</div><p><strong>Omit:</strong> Never include date of birth or salary expectations.</p></div>
+        <div class="tip-item"><div class="tip-num">10</div><p><strong>Omit:</strong> Never include your date of birth or salary expectations.</p></div>
       </div>
 
       <div style="text-align:center;margin-top:3rem;">
