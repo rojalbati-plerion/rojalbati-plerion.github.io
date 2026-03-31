@@ -4,12 +4,109 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Learn - Career Guidance | Rojal Bati</title>
-  <meta name="description" content="Learn how to start your QA career — essential skills, tools, and resources for beginner software testers." />
+  <meta name="description" content="Enhance your QA knowledge in just 11 days. Courses on Manual Testing, API Testing, Performance Testing, Test Automation, and Scrum." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <script src="nav.js" defer></script>
+  <style>
+    .learn-intro { color: #238c8c; font-weight: 600; font-size: 1.1rem; margin-bottom: 2.5rem; }
+    .course-card {
+      background: #fff;
+      border: 1px solid #e0f0ea;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    }
+    .course-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    .course-title {
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #144659;
+    }
+    .course-time {
+      background: #e8f8f2;
+      color: #0d5b5b;
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 600;
+      font-size: 0.78rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 20px;
+      white-space: nowrap;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      flex-shrink: 0;
+    }
+    .course-desc { color: #555; margin-bottom: 1rem; line-height: 1.7; }
+    .course-note {
+      background: #fffbea;
+      border-left: 3px solid #f4c430;
+      padding: 0.6rem 1rem;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.9rem;
+      color: #7a6000;
+      margin-bottom: 1rem;
+    }
+    .resource-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #238c8c;
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 600;
+      font-size: 0.875rem;
+      padding: 0.5rem 1rem;
+      border: 2px solid #238c8c;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+      margin-top: 0.5rem;
+      margin-right: 0.5rem;
+    }
+    .resource-link:hover { background: #238c8c; color: #fff; }
+    .resource-link svg { flex-shrink: 0; }
+
+    .bonus-card {
+      background: linear-gradient(135deg, #0d5b5b 0%, #238c8c 100%);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-top: 2.5rem;
+      color: #fff;
+    }
+    .bonus-title {
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+      color: #29f48f;
+    }
+    .bonus-card p { color: rgba(255,255,255,0.85); margin-bottom: 1rem; }
+    .bonus-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #29f48f;
+      color: #0d5b5b;
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 700;
+      font-size: 0.875rem;
+      padding: 0.6rem 1.25rem;
+      border-radius: 6px;
+      transition: background 0.2s;
+      margin-right: 0.5rem;
+      margin-top: 0.25rem;
+    }
+    .bonus-link:hover { background: #1dd67c; }
+  </style>
 </head>
 <body>
 
@@ -17,8 +114,8 @@
 
   <section class="page-hero">
     <div class="page-hero-content">
-      <h1 class="page-hero-title">Learn</h1>
-      <p class="page-hero-sub">Career Guidance &rsaquo; Beginner &rsaquo; Learn</p>
+      <h1 class="page-hero-title">Learn 📚</h1>
+      <p class="page-hero-sub">Enhance your QA knowledge in just 11 Days</p>
     </div>
   </section>
 
@@ -27,68 +124,85 @@
       <div class="breadcrumb">
         <a href="index.html">Home</a>
         <span>&#8250;</span>
-        <span>Career Guidance</span>
+        <a href="#">Career Guidance</a>
+        <span>&#8250;</span>
+        <a href="#">Beginner</a>
         <span>&#8250;</span>
         <span>Learn</span>
       </div>
 
-      <h2 class="section-title">Start Your QA Learning Journey</h2>
-      <p style="color:#555;margin-bottom:2.5rem;max-width:720px;">The software testing field is vast, but you don't have to learn everything at once. Follow this structured path to build a strong foundation as a beginner QA engineer.</p>
+      <h2 class="section-title">Learn</h2>
+      <p class="learn-intro">Enhance your QA knowledge in just 11 Days</p>
 
-      <div class="content-card">
-        <h3><span class="step-badge">1</span> Understand the Fundamentals</h3>
-        <p>Before writing a single test case, you need to understand <em>what</em> you're testing and <em>why</em>. Start here:</p>
-        <ul>
-          <li>What is software testing and why does it matter?</li>
-          <li>The difference between verification and validation</li>
-          <li>Types of testing: manual vs automated, functional vs non-functional</li>
-          <li>The Software Development Life Cycle (SDLC) and where QA fits in</li>
-          <li>The Software Testing Life Cycle (STLC)</li>
-        </ul>
+      <!-- 1. Manual Testing -->
+      <div class="course-card">
+        <div class="course-header">
+          <span class="course-title">1. Manual Testing</span>
+          <span class="course-time">⏱ 7 Days &nbsp;[1.5–2 hrs daily]</span>
+        </div>
+        <p class="course-desc">In this course, you will learn the fundamentals of software testing. It is recommended that you take detailed notes as you progress through the material, as these notes will be useful when you begin working as a QA engineer.</p>
+        <a href="https://docs.google.com/document/d/1fJFEONJflhQU-bdZ6h5rNcuHorAPsOCsb2ypZGeik44/copy" target="_blank" rel="noopener" class="resource-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Sample CV Template
+        </a>
       </div>
 
-      <div class="content-card">
-        <h3><span class="step-badge">2</span> Master Test Case Writing</h3>
-        <p>Writing clear, reproducible test cases is the core skill of every QA engineer.</p>
-        <ul>
-          <li>How to write effective test cases (title, preconditions, steps, expected result)</li>
-          <li>Equivalence partitioning and boundary value analysis</li>
-          <li>Decision table testing and state transition testing</li>
-          <li>Exploratory testing techniques</li>
-        </ul>
+      <!-- 2. API Testing -->
+      <div class="course-card">
+        <div class="course-header">
+          <span class="course-title">2. API Testing</span>
+          <span class="course-time">⏱ 1 Day &nbsp;[Approx. 2 Hours]</span>
+        </div>
+        <p class="course-desc">This course will provide a comprehensive understanding of APIs and how to test them using the POSTMAN tool. By the end of this course, you should have a solid foundation in API testing and be able to effectively utilise the POSTMAN tool.</p>
       </div>
 
-      <div class="content-card">
-        <h3><span class="step-badge">3</span> Learn Bug Reporting</h3>
-        <p>A bug report is only as useful as the information it contains. Learn to write reports that developers can act on immediately.</p>
-        <ul>
-          <li>Bug lifecycle: New → Assigned → Fixed → Verified → Closed</li>
-          <li>Writing a good bug title and description</li>
-          <li>How to set severity and priority correctly</li>
-          <li>Tools: Jira, TestRail, Bugzilla</li>
-        </ul>
+      <!-- 3. Performance Testing -->
+      <div class="course-card">
+        <div class="course-header">
+          <span class="course-title">3. Performance Testing</span>
+          <span class="course-time">⏱ 1 Day &nbsp;[Approx. 2 Hours]</span>
+        </div>
+        <p class="course-desc">In this course, you will get a good understanding of Performance Testing and the JMeter tool for Load and Performance Testing.</p>
+        <div class="course-note">
+          📌 Watch the JMeter 2021 Masterclass video until "1st JMeter Test" — i.e. up to the <strong>28:57</strong> mark (Video 2).
+        </div>
       </div>
 
-      <div class="content-card">
-        <h3><span class="step-badge">4</span> Get Familiar with Agile &amp; Scrum</h3>
-        <p>Most modern software teams work in an Agile environment. Understanding Scrum ceremonies and processes will make you a more effective team member.</p>
-        <ul>
-          <li>Sprints, standups, retrospectives, and sprint reviews</li>
-          <li>User stories and acceptance criteria</li>
-          <li>Definition of Done (DoD) and Definition of Ready (DoR)</li>
-          <li>How QA integrates into an Agile team</li>
-        </ul>
+      <!-- 4. Test Automation -->
+      <div class="course-card">
+        <div class="course-header">
+          <span class="course-title">4. Test Automation</span>
+          <span class="course-time">⏱ 1 Day &nbsp;[Approx. 2 Hours]</span>
+        </div>
+        <p class="course-desc">Learn test automation using the Cypress framework and write your first automated test. Before starting, make sure you have <strong>Node.js</strong>, <strong>VS Code</strong>, and basic <strong>JavaScript</strong> knowledge.</p>
+        <div class="course-note">
+          📌 <strong>Prerequisite:</strong> Watch the JavaScript tutorial linked below before starting the Cypress course.
+        </div>
+        <a href="https://youtu.be/IQuG77FNMhw" target="_blank" rel="noopener" class="resource-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+          JavaScript Tutorial for Beginners – Test Automation
+        </a>
       </div>
 
-      <div class="content-card">
-        <h3><span class="step-badge">5</span> Introduction to Automation</h3>
-        <p>You don't need to be a developer, but knowing the basics of automation will open many doors.</p>
-        <ul>
-          <li>What is test automation and when should you automate?</li>
-          <li>Learn basic programming: Python or Java are great starting points</li>
-          <li>Introduction to Selenium WebDriver</li>
-          <li>API testing basics with Postman</li>
-        </ul>
+      <!-- 5. Scrum -->
+      <div class="course-card">
+        <div class="course-header">
+          <span class="course-title">5. Scrum</span>
+          <span class="course-time">⏱ 1 Day &nbsp;[Less than an hour]</span>
+        </div>
+        <p class="course-desc">In this course you will get a better idea of Agile (specifically Scrum) methodology for Software Development.</p>
+      </div>
+
+      <!-- BONUS -->
+      <div class="bonus-card">
+        <p class="bonus-title">🎁 Bonus — Free Certification on Cypress</p>
+        <p>After completing the courses above, you can earn a <strong>free Cypress certification</strong> from Test Automation University. Complete the Introduction to Cypress course and receive a certificate you can add to your CV and LinkedIn.</p>
+        <a href="https://testautomationu.applitools.com/cypress-tutorial/" target="_blank" rel="noopener" class="bonus-link">
+          Introduction to Cypress Course
+        </a>
+        <a href="https://testautomationu.applitools.com/login.html" target="_blank" rel="noopener" class="bonus-link">
+          Sign Up for Free
+        </a>
       </div>
 
       <div style="text-align:center;margin-top:3rem;">
