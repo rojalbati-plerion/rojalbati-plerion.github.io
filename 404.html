@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Page Not Found | Rojal Bati</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="nav.js" defer></script>
+  <style>
+    .error-page {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 1.5rem;
+    }
+    .error-code {
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 700;
+      font-size: clamp(5rem, 15vw, 9rem);
+      color: #e8f8f2;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .error-emoji { font-size: 3rem; margin-bottom: 1rem; display: block; }
+    .error-title {
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #144659;
+      margin-bottom: 0.75rem;
+    }
+    .error-text { color: #666; margin-bottom: 2rem; }
+  </style>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <div class="error-page">
+    <div>
+      <div class="error-code">404</div>
+      <span class="error-emoji">&#129402;</span>
+      <h1 class="error-title">Page Not Found</h1>
+      <p class="error-text">We are sorry. But the page you are looking for is not available.</p>
+      <a href="index.html" class="btn btn-primary">Back to Homepage</a>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="script.js"></script>
+</body>
+</html>
