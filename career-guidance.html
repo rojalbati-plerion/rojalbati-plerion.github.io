@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career Guidance - Beginners Guide | Rojal Bati</title>
+  <meta name="description" content="Follow these steps to get into a QA Internship. Beginner's guide covering Learn, CV, Apply, and Interview." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="nav.js" defer></script>
+  <style>
+    .steps-section {
+      padding: 5rem 0;
+      background: #fff;
+    }
+
+    .steps-intro {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .steps-intro .section-title { display: inline-block; }
+    .steps-intro p {
+      color: #555;
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .step-card {
+      background: #fff;
+      border: 2px solid #e0f0ea;
+      border-radius: 16px;
+      padding: 2.5rem 1.75rem;
+      text-align: center;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .step-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(35,140,140,0.15);
+      border-color: #29f48f;
+    }
+
+    .step-number {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, #238c8c, #29f48f);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 700;
+      font-size: 1.4rem;
+      margin-bottom: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .step-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      line-height: 1;
+    }
+
+    .step-title {
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #144659;
+      margin-bottom: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .step-desc {
+      color: #666;
+      font-size: 0.95rem;
+      margin-bottom: 1.75rem;
+      flex: 1;
+    }
+
+    .step-btn {
+      display: inline-block;
+      background: #29f48f;
+      color: #0d5b5b;
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 0.6rem 2rem;
+      border-radius: 4px;
+      border: 2px solid #29f48f;
+      transition: background 0.2s, color 0.2s;
+    }
+    .step-btn:hover {
+      background: transparent;
+      color: #238c8c;
+      border-color: #238c8c;
+    }
+
+    /* Arrow connector between steps */
+    .steps-flow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin-top: 3rem;
+    }
+    .flow-step {
+      text-align: center;
+      flex: 1;
+      position: relative;
+    }
+    .flow-step:not(:last-child)::after {
+      content: '→';
+      position: absolute;
+      right: -0.6rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.5rem;
+      color: #29f48f;
+      font-weight: 700;
+    }
+    .flow-label {
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      color: #238c8c;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: #f0fdf8;
+      border: 1px solid #c8f0e0;
+      border-radius: 20px;
+      padding: 0.35rem 1rem;
+      display: inline-block;
+    }
+
+    @media (max-width: 900px) {
+      .steps-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 500px) {
+      .steps-grid { grid-template-columns: 1fr; }
+      .flow-step:not(:last-child)::after { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <h1 class="page-hero-title">Beginners Guide</h1>
+      <p class="page-hero-sub">Follow these steps to get into QA Internship</p>
+    </div>
+  </section>
+
+  <section class="steps-section">
+    <div class="container">
+
+      <div class="steps-intro">
+        <h2 class="section-title text-center">Career Guidance</h2>
+        <p>A step-by-step path from zero to your first QA internship</p>
+      </div>
+
+      <div class="steps-grid">
+
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-icon">📚</div>
+          <div class="step-title">Learn</div>
+          <p class="step-desc">Gain knowledge</p>
+          <a href="learn.html" class="step-btn">Start</a>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-icon">📄</div>
+          <div class="step-title">CV</div>
+          <p class="step-desc">Create a clean CV</p>
+          <a href="cv.html" class="step-btn">Start</a>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-icon">💼</div>
+          <div class="step-title">Apply</div>
+          <p class="step-desc">Apply for Job</p>
+          <a href="apply.html" class="step-btn">Start</a>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <div class="step-icon">👔</div>
+          <div class="step-title">Interview</div>
+          <p class="step-desc">Prepare for Interview</p>
+          <a href="interview.html" class="step-btn">Start</a>
+        </div>
+
+      </div>
+
+      <!-- Flow indicator -->
+      <div class="steps-flow">
+        <div class="flow-step"><span class="flow-label">Learn</span></div>
+        <div class="flow-step"><span class="flow-label">CV</span></div>
+        <div class="flow-step"><span class="flow-label">Apply</span></div>
+        <div class="flow-step"><span class="flow-label">Interview</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="script.js"></script>
+</body>
+</html>

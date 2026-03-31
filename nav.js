@@ -10,10 +10,10 @@
 
           <!-- Career Guidance — two-level dropdown -->
           <li class="nav-item has-dropdown">
-            <a href="#" class="nav-link">Career Guidance <span class="caret">&#9660;</span></a>
+            <a href="career-guidance.html" class="nav-link">Career Guidance <span class="caret">&#9660;</span></a>
             <ul class="dropdown level-1">
               <li class="has-flyout">
-                <a href="#">Beginner <span class="flyout-arrow">&#8250;</span></a>
+                <a href="career-guidance.html">Beginner <span class="flyout-arrow">&#8250;</span></a>
                 <ul class="dropdown level-2">
                   <li><a href="learn.html">Learn</a></li>
                   <li><a href="cv.html">CV</a></li>
